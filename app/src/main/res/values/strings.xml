@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SoccerFlash</string>
+    <string name="title_home">Today\'s Fixtures</string>
+    <string name="title_dashboard">Competitions</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_competition_detail">CompetitionDetailActivity</string>
+    <string name="tab_text_1">Table</string>
+    <string name="tab_text_2">Fixtures</string>
+    <string name="tab_text_3">Teams</string>
+    <string name="team_logo">Team Logo</string>
+    <string name="no_fixtures">No fixtures</string>
+    <string name="retry">Retry</string>
+</resources>

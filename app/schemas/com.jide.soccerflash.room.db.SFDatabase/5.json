@@ -1,0 +1,846 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "b2b2b4e5163e097ee51369f8a8e557fc",
+    "entities": [
+      {
+        "tableName": "MatchDetails",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `utcDate` TEXT, `status` TEXT, `minute` TEXT, `attendance` INTEGER, `venue` TEXT, `matchday` INTEGER, `stage` TEXT, `group` TEXT, `lastUpdated` TEXT, `forCompetition` INTEGER NOT NULL, `goals` TEXT, `bookings` TEXT, `substitutions` TEXT, `referees` TEXT, `competitionid` INTEGER, `competitionname` TEXT, `competitioncode` TEXT, `competitionplan` TEXT, `competitionseasons` TEXT, `competitionlastUpdated` TEXT, `competitionareaid` INTEGER, `competitionareaname` TEXT, `competitioncurrentSeasonid` INTEGER, `competitioncurrentSeasonstartDate` TEXT, `competitioncurrentSeasonendDate` TEXT, `competitioncurrentSeasoncurrentMatchDay` INTEGER, `competitioncurrentSeasonavailableStages` TEXT, `seasonid` INTEGER, `seasonstartDate` TEXT, `seasonendDate` TEXT, `seasoncurrentMatchDay` INTEGER, `seasonavailableStages` TEXT, `homeTeamid` INTEGER, `homeTeamname` TEXT, `homeTeamlineup` TEXT, `homeTeambench` TEXT, `homeTeamcoachid` INTEGER, `homeTeamcoachname` TEXT, `homeTeamcoachcountryOfBirth` TEXT, `homeTeamcoachnationality` TEXT, `homeTeamcoachposition` TEXT, `homeTeamcoachshirtNumber` TEXT, `homeTeamcaptainid` INTEGER, `homeTeamcaptainname` TEXT, `homeTeamcaptaincountryOfBirth` TEXT, `homeTeamcaptainnationality` TEXT, `homeTeamcaptainposition` TEXT, `homeTeamcaptainshirtNumber` TEXT, `awayTeamid` INTEGER, `awayTeamname` TEXT, `awayTeamlineup` TEXT, `awayTeambench` TEXT, `awayTeamcoachid` INTEGER, `awayTeamcoachname` TEXT, `awayTeamcoachcountryOfBirth` TEXT, `awayTeamcoachnationality` TEXT, `awayTeamcoachposition` TEXT, `awayTeamcoachshirtNumber` TEXT, `awayTeamcaptainid` INTEGER, `awayTeamcaptainname` TEXT, `awayTeamcaptaincountryOfBirth` TEXT, `awayTeamcaptainnationality` TEXT, `awayTeamcaptainposition` TEXT, `awayTeamcaptainshirtNumber` TEXT, `scorewinner` TEXT, `scoreduration` TEXT, `scorefullTimehomeTeam` INTEGER, `scorefullTimeawayTeam` INTEGER, `scorehalfTimehomeTeam` INTEGER, `scorehalfTimeawayTeam` INTEGER, `scoreextraTimehomeTeam` INTEGER, `scoreextraTimeawayTeam` INTEGER, `scorepenaltieshomeTeam` INTEGER, `scorepenaltiesawayTeam` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "utcDate",
+            "columnName": "utcDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "minute",
+            "columnName": "minute",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "attendance",
+            "columnName": "attendance",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "venue",
+            "columnName": "venue",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "matchday",
+            "columnName": "matchday",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stage",
+            "columnName": "stage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "group",
+            "columnName": "group",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "forCompetition",
+            "columnName": "forCompetition",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "goals",
+            "columnName": "goals",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "bookings",
+            "columnName": "bookings",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "substitutions",
+            "columnName": "substitutions",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "referees",
+            "columnName": "referees",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.id",
+            "columnName": "competitionid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.name",
+            "columnName": "competitionname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.code",
+            "columnName": "competitioncode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.plan",
+            "columnName": "competitionplan",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.seasons",
+            "columnName": "competitionseasons",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.lastUpdated",
+            "columnName": "competitionlastUpdated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.area.id",
+            "columnName": "competitionareaid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.area.name",
+            "columnName": "competitionareaname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.currentSeason.id",
+            "columnName": "competitioncurrentSeasonid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.currentSeason.startDate",
+            "columnName": "competitioncurrentSeasonstartDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.currentSeason.endDate",
+            "columnName": "competitioncurrentSeasonendDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.currentSeason.currentMatchDay",
+            "columnName": "competitioncurrentSeasoncurrentMatchDay",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competition.currentSeason.availableStages",
+            "columnName": "competitioncurrentSeasonavailableStages",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "season.id",
+            "columnName": "seasonid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "season.startDate",
+            "columnName": "seasonstartDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "season.endDate",
+            "columnName": "seasonendDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "season.currentMatchDay",
+            "columnName": "seasoncurrentMatchDay",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "season.availableStages",
+            "columnName": "seasonavailableStages",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.id",
+            "columnName": "homeTeamid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.name",
+            "columnName": "homeTeamname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.lineup",
+            "columnName": "homeTeamlineup",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.bench",
+            "columnName": "homeTeambench",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.coach.id",
+            "columnName": "homeTeamcoachid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.coach.name",
+            "columnName": "homeTeamcoachname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.coach.countryOfBirth",
+            "columnName": "homeTeamcoachcountryOfBirth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.coach.nationality",
+            "columnName": "homeTeamcoachnationality",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.coach.position",
+            "columnName": "homeTeamcoachposition",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.coach.shirtNumber",
+            "columnName": "homeTeamcoachshirtNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.captain.id",
+            "columnName": "homeTeamcaptainid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.captain.name",
+            "columnName": "homeTeamcaptainname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.captain.countryOfBirth",
+            "columnName": "homeTeamcaptaincountryOfBirth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.captain.nationality",
+            "columnName": "homeTeamcaptainnationality",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.captain.position",
+            "columnName": "homeTeamcaptainposition",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "homeTeam.captain.shirtNumber",
+            "columnName": "homeTeamcaptainshirtNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.id",
+            "columnName": "awayTeamid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.name",
+            "columnName": "awayTeamname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.lineup",
+            "columnName": "awayTeamlineup",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.bench",
+            "columnName": "awayTeambench",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.coach.id",
+            "columnName": "awayTeamcoachid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.coach.name",
+            "columnName": "awayTeamcoachname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.coach.countryOfBirth",
+            "columnName": "awayTeamcoachcountryOfBirth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.coach.nationality",
+            "columnName": "awayTeamcoachnationality",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.coach.position",
+            "columnName": "awayTeamcoachposition",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.coach.shirtNumber",
+            "columnName": "awayTeamcoachshirtNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.captain.id",
+            "columnName": "awayTeamcaptainid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.captain.name",
+            "columnName": "awayTeamcaptainname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.captain.countryOfBirth",
+            "columnName": "awayTeamcaptaincountryOfBirth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.captain.nationality",
+            "columnName": "awayTeamcaptainnationality",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.captain.position",
+            "columnName": "awayTeamcaptainposition",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "awayTeam.captain.shirtNumber",
+            "columnName": "awayTeamcaptainshirtNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.winner",
+            "columnName": "scorewinner",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.duration",
+            "columnName": "scoreduration",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.fullTime.homeTeam",
+            "columnName": "scorefullTimehomeTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.fullTime.awayTeam",
+            "columnName": "scorefullTimeawayTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.halfTime.homeTeam",
+            "columnName": "scorehalfTimehomeTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.halfTime.awayTeam",
+            "columnName": "scorehalfTimeawayTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.extraTime.homeTeam",
+            "columnName": "scoreextraTimehomeTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.extraTime.awayTeam",
+            "columnName": "scoreextraTimeawayTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.penalties.homeTeam",
+            "columnName": "scorepenaltieshomeTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "score.penalties.awayTeam",
+            "columnName": "scorepenaltiesawayTeam",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Competition",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `name` TEXT, `code` TEXT, `plan` TEXT, `seasons` TEXT, `lastUpdated` TEXT, `areaid` INTEGER, `areaname` TEXT, `currentSeasonid` INTEGER, `currentSeasonstartDate` TEXT, `currentSeasonendDate` TEXT, `currentSeasoncurrentMatchDay` INTEGER, `currentSeasonavailableStages` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "code",
+            "columnName": "code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "plan",
+            "columnName": "plan",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "seasons",
+            "columnName": "seasons",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "area.id",
+            "columnName": "areaid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "area.name",
+            "columnName": "areaname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentSeason.id",
+            "columnName": "currentSeasonid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentSeason.startDate",
+            "columnName": "currentSeasonstartDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentSeason.endDate",
+            "columnName": "currentSeasonendDate",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentSeason.currentMatchDay",
+            "columnName": "currentSeasoncurrentMatchDay",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currentSeason.availableStages",
+            "columnName": "currentSeasonavailableStages",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TablePositionDetails",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `competitionId` INTEGER, `position` INTEGER, `playedGames` INTEGER, `won` INTEGER, `draw` INTEGER, `lost` INTEGER, `points` INTEGER, `goalsFor` INTEGER, `goalsAgainst` INTEGER, `goalDifference` INTEGER, `teamid` INTEGER, `teamname` TEXT, `teamcrestURI` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "competitionId",
+            "columnName": "competitionId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "playedGames",
+            "columnName": "playedGames",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "won",
+            "columnName": "won",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "draw",
+            "columnName": "draw",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lost",
+            "columnName": "lost",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "points",
+            "columnName": "points",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "goalsFor",
+            "columnName": "goalsFor",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "goalsAgainst",
+            "columnName": "goalsAgainst",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "goalDifference",
+            "columnName": "goalDifference",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "team.id",
+            "columnName": "teamid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "team.name",
+            "columnName": "teamname",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "team.crestURI",
+            "columnName": "teamcrestURI",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Team",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `competitionId` INTEGER, `name` TEXT, `shortName` TEXT, `crestUrl` TEXT, `tla` TEXT, `address` TEXT, `phone` TEXT, `website` TEXT, `email` TEXT, `founded` INTEGER, `clubColors` TEXT, `venue` TEXT, `squad` TEXT, `lastUpdated` TEXT, `areaid` INTEGER, `areaname` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "competitionId",
+            "columnName": "competitionId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shortName",
+            "columnName": "shortName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "crestUrl",
+            "columnName": "crestUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tla",
+            "columnName": "tla",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "address",
+            "columnName": "address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "phone",
+            "columnName": "phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "website",
+            "columnName": "website",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "founded",
+            "columnName": "founded",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "clubColors",
+            "columnName": "clubColors",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "venue",
+            "columnName": "venue",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "squad",
+            "columnName": "squad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "area.id",
+            "columnName": "areaid",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "area.name",
+            "columnName": "areaname",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TeamPlayer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `teamId` INTEGER, `name` TEXT, `dateOfBirth` TEXT, `countryOfBirth` TEXT, `nationality` TEXT, `position` TEXT, `role` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "teamId",
+            "columnName": "teamId",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dateOfBirth",
+            "columnName": "dateOfBirth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryOfBirth",
+            "columnName": "countryOfBirth",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nationality",
+            "columnName": "nationality",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "position",
+            "columnName": "position",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "role",
+            "columnName": "role",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b2b2b4e5163e097ee51369f8a8e557fc')"
+    ]
+  }
+}
