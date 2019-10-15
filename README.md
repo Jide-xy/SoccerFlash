@@ -2,24 +2,24 @@
 To run application, add API key to your gradle.properties file with key "API_KEY"
 
 # Screenshots
-![](https://photos.app.goo.gl/fxMdLDbKq5rpsLCx7)
+![](/Screenshots/Screenshot_20191007-202309.jpg)
 
-![](https://photos.app.goo.gl/2CfPvKj9dtETxqiZ8)
+![](/Screenshots/Screenshot_20191007-202317.jpg)
 
-![](https://photos.app.goo.gl/fG2GLxPeGfitfpV77)
+![](/Screenshots/Screenshot_20191007-202441.jpg)
 
-![](https://photos.app.goo.gl/pdcmZqmxYtiSrJV87)
+![](/Screenshots/Screenshot_20191007-202447.jpg)
 
-![](https://photos.app.goo.gl/S2BSEoq3x4iSoqpz8)
+![](/Screenshots/Screenshot_20191007-202454.jpg)
 
-![](https://photos.app.goo.gl/Kt3v4SJjNmLKmXjE8)
+![](/Screenshots/Screenshot_20191007-202525.jpg)
 
-![](https://photos.app.goo.gl/cVLDo9tPhGsDkLBS7)
+![](/Screenshots/Screenshot_20191007-202532.jpg)
 
-![](https://photos.app.goo.gl/gfMB6rxY8ayPMYSz5)
+![](/Screenshots/Screenshot_20191007-202541.jpg)
 
-![](https://photos.app.goo.gl/AdB8aBe5tjvWBQPP6)
+![](/Screenshots/Screenshot_20191007-202548.jpg)
 
-![](https://photos.app.goo.gl/6BcKKqDuYZKkuUFf6)
+![](/Screenshots/Screenshot_20191007-202612.jpg)
 
-![](https://photos.app.goo.gl/HcUvNJD3ziK8LMwt5)
+![](/Screenshots/Screenshot_20191007-202622.jpg)
