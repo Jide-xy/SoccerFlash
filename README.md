@@ -1,5 +1,5 @@
 # SoccerFlash
-To run application, add API key to your gradle.properties file with key "API_KEY"
+To run application, add API key to your local.properties file with key "API_KEY"
 
 # Screenshots
 ![](/Screenshots/Screenshot_20191007-202309.jpg)
