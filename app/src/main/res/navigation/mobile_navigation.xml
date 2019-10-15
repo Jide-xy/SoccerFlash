@@ -24,9 +24,6 @@
             app:popEnterAnim="@anim/fragment_close_enter"
             app:popExitAnim="@anim/fragment_close_exit">
 
-            <argument
-                android:name="competitionId"
-                android:defaultValue="-1" />
         </action>
     </fragment>
     <activity
@@ -34,10 +31,5 @@
         android:name="com.jide.soccerflash.ui.competitiondetail.CompetitionDetailActivity"
         android:label="activity_competition_detail"
         tools:layout="@layout/activity_competition_detail">
-
-        <argument
-            android:name="competitionId"
-            android:defaultValue="-1"
-            app:argType="integer" />
     </activity>
 </navigation>

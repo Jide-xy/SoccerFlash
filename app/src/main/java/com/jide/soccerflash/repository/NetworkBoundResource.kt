@@ -51,7 +51,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>
             result.addSource(dbSource) { data ->
                 result.removeSource(dbSource)
                 if (shouldFetch(data)) {
-                    uiScope.launch(Dispatchers.IO) {
+                    uiScope.launch {
                         fetchFromNetwork(dbSource)
                     }
                 } else {
@@ -72,12 +72,24 @@ abstract class NetworkBoundResource<ResultType, RequestType>
     }
 
     private suspend fun fetchFromNetwork(dbSource: LiveData<ResultType>) {
-        withContext(Dispatchers.Main) {
-            try {
-                val apiResponse = liveData(Dispatchers.IO) { emit(createCall()) }
+        try {
+            coroutineScope {
                 // we re-attach dbSource as a new source, it will dispatch its latest value quickly
                 result.addSource(dbSource) { newData ->
                     setValue(Resource.loading(newData))
+                }
+                val apiResponse = liveData(Dispatchers.IO) {
+                    try {
+                        emit(createCall())
+                    } catch (e: Throwable) {
+                        withContext(Dispatchers.Main) {
+                            onFetchFailed()
+                            result.removeSource(dbSource)
+                            result.addSource(dbSource) { newData ->
+                                setValue(Resource.error(e.message.toString(), newData))
+                            }
+                        }
+                    }
                 }
                 result.addSource(apiResponse) { response ->
                     result.removeSource(apiResponse)
@@ -99,15 +111,13 @@ abstract class NetworkBoundResource<ResultType, RequestType>
                     }
 
                 }
-            } catch (e: Throwable) {
+            }
+        } catch (e: Throwable) {
                 onFetchFailed()
                 result.addSource(dbSource) { newData ->
                     setValue(Resource.error(e.cause?.message.toString(), newData))
                 }
             }
-
-        }
-
     }
 
     private fun processErrorResponse(response: Response<RequestType>): String {
