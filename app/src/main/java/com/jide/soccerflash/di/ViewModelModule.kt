@@ -18,13 +18,11 @@ package com.jide.soccerflash.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-
-import com.currency.converter.demo.viewmodel.ViewModelFactory
 import com.jide.soccerflash.ui.competitiondetail.standings.StandingsViewModel
 import com.jide.soccerflash.ui.competitiondetail.teams.TeamsViewModel
 import com.jide.soccerflash.ui.home.competitions.CompetitionViewModel
 import com.jide.soccerflash.ui.home.todaysfixtures.FixturesViewModel
-
+import com.jide.soccerflash.viewmodel.ViewModelFactory
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

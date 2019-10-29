@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.currency.converter.demo.viewmodel
+package com.jide.soccerflash.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
